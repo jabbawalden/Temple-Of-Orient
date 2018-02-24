@@ -5,17 +5,17 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Engine/TriggerVolume.h"
-#include "RotateBridge.generated.h"
+#include "ObjectEventActivate.generated.h"
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FRotateEvent);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TEMPLE_API URotateBridge : public UActorComponent
+class TEMPLE_API UObjectEventActivate : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	URotateBridge();
+	UObjectEventActivate();
 
 	UPROPERTY(BlueprintAssignable)
 		FRotateEvent ObjectEventActivation;

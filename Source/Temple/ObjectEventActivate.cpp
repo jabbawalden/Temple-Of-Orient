@@ -1,13 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "RotateBridge.h"
+#include "ObjectEventActivate.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/Actor.h"
 
 #define OUT
 // Sets default values for this component's properties
-URotateBridge::URotateBridge()
+UObjectEventActivate::UObjectEventActivate()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -18,7 +18,7 @@ URotateBridge::URotateBridge()
 
 
 // Called when the game starts
-void URotateBridge::BeginPlay()
+void UObjectEventActivate::BeginPlay()
 {
 	Super::BeginPlay();
 	Owner = GetOwner();
@@ -30,7 +30,7 @@ void URotateBridge::BeginPlay()
 }
 
 
-float URotateBridge::GetTotalMass()
+float UObjectEventActivate::GetTotalMass()
 {
 	float TotalMass = 0.f;
 	//find all the overlapping actors
@@ -51,7 +51,7 @@ float URotateBridge::GetTotalMass()
 }
 
 // Called every frame
-void URotateBridge::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UObjectEventActivate::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
