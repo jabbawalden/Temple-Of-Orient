@@ -58,7 +58,7 @@ void URotateBridge::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 	if (GetTotalMass() >= TriggerMass) 
 	{
-		BridgeRotateEvent.Broadcast();
+		ObjectEventActivation.Broadcast();
 	}
 }
 

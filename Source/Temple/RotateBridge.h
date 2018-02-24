@@ -18,9 +18,9 @@ public:
 	URotateBridge();
 
 	UPROPERTY(BlueprintAssignable)
-		FRotateEvent BridgeRotateEvent;
+		FRotateEvent ObjectEventActivation;
 	UPROPERTY(BlueprintAssignable)
-		FRotateEvent BridgeStillEvent;
+		FRotateEvent ObjectEventDeactivation;
 
 protected:
 	// Called when the game starts
