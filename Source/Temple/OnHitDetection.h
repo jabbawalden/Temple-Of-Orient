@@ -2,10 +2,10 @@
 
 #pragma once
 
+#include "GameFramework/Actor.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "OnHitDetection.generated.h"
-
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TEMPLE_API UOnHitDetection : public UActorComponent
@@ -24,5 +24,10 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+private:
+
+	void ReturnActorCollisionInfo();
+
+	//AActor* MyCollider = GetOwner()->GetRootComponent()->GetAttachParent->GetOwner();
 	
 };

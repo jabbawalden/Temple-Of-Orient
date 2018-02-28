@@ -60,5 +60,10 @@ void UObjectEventActivate::TickComponent(float DeltaTime, ELevelTick TickType, F
 	{
 		ObjectEventActivation.Broadcast();
 	}
+
+	if (!PressurePlate)
+	{
+		ObjectEventActivation.Broadcast();
+	}
 }
 

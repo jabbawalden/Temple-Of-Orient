@@ -2,6 +2,7 @@
 
 #include "OnHitDetection.h"
 
+
 // Sets default values for this component's properties
 UOnHitDetection::UOnHitDetection()
 {
@@ -22,6 +23,13 @@ void UOnHitDetection::BeginPlay()
 	
 }
 
+void UOnHitDetection::ReturnActorCollisionInfo()
+{
+	/*
+	FString ParentName = GetOwner()->GetName();
+	UE_LOG(LogTemp, Warning, TEXT(" OnHitDetection is attached to %s "), *ParentName);
+	*/
+}
 
 // Called every frame
 void UOnHitDetection::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -30,6 +38,8 @@ void UOnHitDetection::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 	// ...
 }
+
+
 
 
 
