@@ -38,7 +38,7 @@ float UObjectEventActivate::GetTotalMass()
 
 	//protection if pressureplate not set or found
 	if (!PressurePlate) { return TotalMass; }
-	PressurePlate->GetOverlappingActors(OUT OverlappingActors);
+	PressurePlate->GetOverlappingActors(OUT OverlappingActors);W
 
 	for (const auto* Actor : OverlappingActors)
 	{
